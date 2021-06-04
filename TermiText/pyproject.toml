@@ -1,7 +1,8 @@
 [tool.poetry]
 name = "TermiText"
-version = "0.1.0"
+version = "0.1.8"
 description = "Color and format text in the console"
+readme = "README.md"
 authors = ["Yek <gwojtysiak34@gmail.com>"]
 
 [tool.poetry.dependencies]
