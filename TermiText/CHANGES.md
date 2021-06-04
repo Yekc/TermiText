@@ -1,5 +1,10 @@
 ## CHANGES
 
+**0.1.9**
+- Fixed `clear()`
+- Fixed `get_os()`
+- Added `slowprint()`
+
 **0.1.0 -> 0.1.8**:
 - Fixed PyPi description to display (had to test it a few times, resulting in it skipping a few numbers)
 - Updated README.md

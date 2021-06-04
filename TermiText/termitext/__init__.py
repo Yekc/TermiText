@@ -1,4 +1,9 @@
-__version__ = "0.1.8"
+import platform
+from os import system
+import time
+import sys
+
+__version__ = "0.1.9"
 
 class colors:
     reset = "\033[0m"
@@ -128,3 +133,12 @@ def clear():
 		system("clear")
 	else:
 		system("cls")
+
+def slowprint(text = "", waitfor = 0.1, slice = ""):
+	for i in text:
+		try:
+			sys.stdout.write(i + slice)
+		except:
+			sys.stdout.write(i)
+		sys.stdout.flush()
+		time.sleep(waitfor)
