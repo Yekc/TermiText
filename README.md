@@ -40,3 +40,4 @@ animation.play("myAnimation")
 **LIST OF FORMATS:**  
 - Styles: bold, underline, strikethrough, invisible, reverse, disable  
 
+*PyPi README.md file is in TermiText folder, this one is just for Github*
