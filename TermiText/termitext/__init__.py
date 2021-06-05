@@ -3,7 +3,7 @@ from os import system
 import time
 import sys
 
-__version__ = "0.1.9"
+__version__ = "0.2.0"
 
 class colors:
     reset = "\033[0m"
@@ -142,3 +142,26 @@ def slowprint(text = "", waitfor = 0.1, slice = ""):
 			sys.stdout.write(i)
 		sys.stdout.flush()
 		time.sleep(waitfor)
+
+class frames:
+	def add(self, attr, val):
+		setattr(self, attr, val)
+
+class animations:
+	def add(self, attr, val):
+		setattr(self, attr, val)
+
+class animation:
+	def create(id = "", frametime = 0.5):
+		animations.add(animations, id, frametime)
+
+	def frame(id = "", content = ""):
+		if hasattr(frames, id):
+			exec("frames." + id + ".append(\"" + content + "\")")
+		else:
+			frames.add(frames, id, [content])
+
+	def play(id = ""):
+		afiltered = [attr for attr in vars(animations) if not attr.startswith("__") and not attr.startswith("add")]
+		ffiltered = [attr for attr in vars(frames) if not attr.startswith("__") and not attr.startswith("add")]
+		exec("for i in frames." + id + ":\n\tsys.stdout.write(i)\n\tsys.stdout.flush()\n\ttime.sleep(animations." + id + ")\n\tclear()")

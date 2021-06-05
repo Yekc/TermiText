@@ -1,5 +1,11 @@
 ## CHANGES
 
+**0.2.0**
+- Added animations
+  - Added `animation.create()`  
+  - Added `animation.frame()`
+  - Added `animation.play()`
+
 **0.1.9**
 - Fixed `clear()`
 - Fixed `get_os()`
